@@ -4,11 +4,16 @@
 }
 
 #about-info {
+
     max-width:600px;
-    margin: 50px auto;
+    margin: 0 auto;
     padding:15px;
 
     background:rgb(5, 3, 3);
+}
+
+#pdf {
+    width:90%;
 }
 
 .code-card {
@@ -55,6 +60,8 @@
     
     transition: transform .25s, color .25s;
 }
+
+
 .signature:hover, .code-card img:hover{
     transform:scale(1.2);
     color:rgb(255, 232, 158);
