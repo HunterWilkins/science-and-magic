@@ -83,6 +83,10 @@
     overflow:hidden;
 }
 
+.thumbnail:hover{
+    cursor:pointer;
+}
+
 .thumbnail img{
     width:100%;
     position:absolute;
