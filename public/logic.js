@@ -206,7 +206,7 @@ $(document).ready(function(){
     artwork.forEach(function(item) {
         $("#gallery").append(
             `
-            <div class = "thumbnail">
+            <div class = "thumbnail" value = "${item.large}">
                 <img src = "/images/full-sized/${item.large}" alt = ${item.large.split(".")[0]}>
                 <p class = "title">${item.large.split(".")[0]}</p>
             </div>     
@@ -215,6 +215,24 @@ $(document).ready(function(){
     });
    
     // =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
+
+    // Artwork Full-Screen Functionality =/=/=/=/=/=/=/=/=/=/=/=/
+        $("#gallery").on("click", ".thumbnail", function(){
+            console.log("Clicked!");
+            console.log($(this).attr("value"));
+            $("body").append(
+                `
+                <div id = "fullscreen">
+                    <img src = "/images/full-sized/${$(this).attr("value")}" alt = "fullscreen image">
+                </div>
+                `
+            );
+        });
+
+        $("body").on("click", "#fullscreen", function(){
+            $(this).remove();
+        });
+    // /=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
 
     // Sidebar functionality
     $("#show-sidebar").on("click", function(){
