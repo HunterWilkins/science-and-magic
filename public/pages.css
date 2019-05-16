@@ -68,3 +68,33 @@
     color:rgb(255, 232, 158);
     text-shadow:0 0 5px rgb(255, 232, 158);
 }
+
+/* Artwork Page */
+#gallery {
+    padding:15px;
+}
+
+.thumbnail {
+    display:inline-block;
+    width:200px;
+    height:200px;
+    margin:5px;
+    position:relative;
+    overflow:hidden;
+}
+
+.thumbnail img{
+    width:100%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%) scale(1.4);
+}
+
+.title {
+    width:100%;
+    position:absolute;
+    bottom:0;
+    z-index:2;
+    background:rgb(5, 3, 3, .5);
+}

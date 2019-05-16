@@ -50,15 +50,131 @@ $(document).ready(function(){
 
     ]
 
-    let codePage = 
-        `
-            <div id = "code">
-                <a href = "https://gigbook-p3.herokuapp.com/" target = "_blank">GigBook
-                <a href = "https://hunterwilkins.github.io/Top-Tip/" target = "_blank">Top-Tip
-                <a href = "https://hunterwilkins.github.io/Cool_Trivia/" target = "_blank">Cool Trivia!
-                <a href = "https://hunterwilkins.github.io/project_one/" target = "_blank">Nusic
-            </div>
-        `
+    
+    let artwork = [
+        {
+            thumbnail: "Artiodactyla-Thumbnail.png", 
+            genre: "concept",
+            large: "Artiodactyla of the Primordial Winter.jpg",
+            desc:"Near the beginning of time, a primordial deer wanders the sunless world." 
+        },
+        {
+            thumbnail: "Bucketbot-Thumbnail.png",
+            genre: "romance",
+            large: "Bucketbot&#39s Discovery.jpg",
+            desc:"A recently-married couple takes a moment to remind each other of their love, drawing the gaze of a longing robot."
+        },
+
+        {
+            thumbnail: "Opossum-Thumbnail.png",
+            genre: "misc",
+            large: "Mason&#39s Opossum Shirt.png",
+            desc: "Mason hates Opossums, so, I made him this shirt."
+        },
+
+        {
+            thumbnail:"Lilia-Thumbnail.png",
+            genre: "concept",
+            large: "Lilia - Goddess of Magic.png",
+            desc: "A notorious (and powerful) trickster, Lilia could demolish the world if she so desired. Mortals are thankful she's slow to boredom."
+        },
+
+        {
+            thumbnail: "Mandolineer-Thumbnail.png",
+            genre: "misc",
+            large: "The Mandolineer.jpg",
+            desc: " "
+        },
+
+        {
+            thumbnail: "Snake-Thumbnail.png",
+            genre: "misc",
+            large: "The Cereal Snake.png",
+            desc: "HiI'mtheCerealSnakeGoodbye!"
+        },
+        {
+            thumbnail:"Slime-Thumbnail.png",
+            genre:"romance",
+            large: "The Lonely Slime.jpg",
+            desc: "As the immortal slime grows in years, it becomes more complex. Eventually, its mind becomes indistinguishable from a human's, and it learns to long for the same things we do."
+        },
+        {
+            thumbnail: "Iliolos-Thumbnail.png",
+            genre: "concept",
+            large: "Iliolis - The Trapped Goddess.jpg",
+            desc: "A goddess, trapped within an ocean of liquid air, reaches eternally for the one thing that could make her omnipotent."
+        },
+
+        {
+            thumbnail:"Ugh-Thumbnail.jpg",
+            genre: "romance",
+            large:"Ugh.jpg",
+            desc: "Hostage Situation"
+        },
+        {
+            thumbnail:"It Beats Debt-Thumbnail.jpg",
+            genre: "romance",
+            large:"It Beats Debt.jpg",
+            desc:"Hostage Situation"
+        },
+        {
+            thumbnail:"Awkward-Thumbnail.jpg",
+            genre: "romance",
+            large: "Awkward.jpg",
+            desc: "Hostage Situation: \"I hope she's not scared...\" / \"I hope he's not crazy...\""
+        },
+        {
+            thumbnail:"A Couple Stories-Thumbnail.jpg",
+            genre: "romance",
+            large: "A Couple Stories.jpg",
+            desc:"Hostage Situation: Nothing brings two outcasts together more than their pasts."
+        },
+        {
+            thumbnail: "Planning-Thumbnail.jpg",
+            genre:"romance",
+            large: "Planning.jpg",
+            desc:"Hostage Situation"
+        },
+        {
+            thumbnail:"Heist-Thumbnail.jpg",
+            genre:"romance",
+            large:"Heist.jpg",
+            desc:"Hostage Situation"
+        },
+        {
+            thumbnail:"Triumph-Thumbnail.jpg",
+            genre:"romance",
+            large:"Triumph.jpg",
+            desc:"Hostage Situation: \"Three square meals a day and housing with your sweetheart? Sounds like a triumph to me, right?\""
+        },
+
+        {
+            thumbnail: "Mandolia-Thumbnail.jpg",
+            genre:"misc",
+            large:"Mandolia.jpg",
+            desc:"A birthday present for my Dad, who plays the mandolin."
+        },
+        {
+            thumbnail:"A Complementary Couple-Thumbnail.jpg",
+            genre:"romance",
+            large:"A Complementary Couple.jpg",
+            desc:"Complementary colors, while the furthest apart on the color wheel, each make the other brighter when paired together."
+        },
+        {
+            thumbnail:"Ashen Valley-Thumbnail.jpg",
+            genre:"concept",
+            large:"Ashen Valley.jpg",
+            desc: "...once you traverse the Gilded Gate, you'll enter the Golden Valley, land of the Artians."        
+        },
+        {
+            thumbnail:"The Demon of Hate - Thumbnail.jpg",
+            genre:"concept",
+            large:"The Demon of Hate.jpg",
+            desc: "The poor thing roared for hours before her throat gave out. Pater's being an absolute angel to her, but it's going to take time..."        
+        }
+                
+        ];
+
     // =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
 
 
@@ -81,6 +197,19 @@ $(document).ready(function(){
                 <p><em>${item.desc}</em></p>
 
             </div>
+            `
+        );
+
+
+    });
+
+    artwork.forEach(function(item) {
+        $("#gallery").append(
+            `
+            <div class = "thumbnail">
+                <img src = "/images/full-sized/${item.large}" alt = ${item.large.split(".")[0]}>
+                <p class = "title">${item.large.split(".")[0]}</p>
+            </div>     
             `
         );
     });
