@@ -96,5 +96,5 @@
     position:absolute;
     bottom:0;
     z-index:2;
-    background:rgb(5, 3, 3, .5);
+    background:rgba(5, 3, 3, .5);
 }
