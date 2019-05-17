@@ -207,19 +207,19 @@ $(document).ready(function(){
         $("#gallery").append(
             `
             <div class = "thumbnail" value = "${item.large}">
-                <img class = "thumbnail-image" src = "/images/full-sized/${item.large}" alt = ${item.large.split(".")[0]}>
+                <img class = "thumbnail-image" src = "/images/thumbnails/${item.thumbnail}" alt = ${item.large.split(".")[0]}>
                 <p class = "title">${item.large.split(".")[0]}</p>
             </div>     
             `
         );
     });
 
-    $("#gallery").ready(function(){
-        $(".thumbnail-image").on("load", function(){
-            $(".thumbnail-image").css("display", "block");
-            $(".thumbnail-image").animate({opacity:1}, 1000);
-        });
-    });
+    // $("#gallery").ready(function(){
+    //     $(".thumbnail-image").on("load", function(){
+    //         $(".thumbnail-image").css("display", "block");
+    //         $(".thumbnail-image").animate({opacity:1}, 1000);
+    //     });
+    // });
    
     // =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
 
