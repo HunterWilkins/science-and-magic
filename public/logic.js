@@ -207,7 +207,7 @@ $(document).ready(function(){
         $("#gallery").append(
             `
             <div class = "thumbnail" value = "${item.large}">
-                <img class = "thumbnail-image" src = "/images//${item.large}" alt = ${item.large.split(".")[0]}>
+                <img class = "thumbnail-image" src = "/images/${item.large}" alt = ${item.large.split(".")[0]}>
                 <p class = "title">${item.large.split(".")[0]}</p>
             </div>     
             `
