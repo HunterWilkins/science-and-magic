@@ -75,32 +75,51 @@
 }
 
 .thumbnail {
+
     display:inline-block;
     width:200px;
     height:200px;
     margin:5px;
     position:relative;
     overflow:hidden;
+    border: rgba(245, 197, 92, 0) solid 2px;
+
+    transition: border .25s;
 }
 
 .thumbnail:hover{
     cursor:pointer;
+    border:rgba(245, 197, 92, 1) solid 2px;
 }
 
-.thumbnail img{
+.thumbnail:hover .title{
+    bottom:0;
+}
+
+.thumbnail-image{
+    opacity:0;
+
     width:100%;
     position:absolute;
     top:50%;
     left:50%;
     transform:translate(-50%, -50%) scale(1.4);
+    transition: opacity .5s;
 }
 
 .title {
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    height:2em;
     width:100%;
     position:absolute;
-    bottom:0;
+    padding:5px;
+    bottom:-2em;
     z-index:2;
     background:rgba(5, 3, 3, .75);
+
+    transition:bottom .25s;
 }
 
 #fullscreen {
