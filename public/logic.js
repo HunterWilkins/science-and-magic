@@ -216,7 +216,7 @@ $(document).ready(function(){
 
     $("#gallery").ready(function(){
         $(".thumbnail-image").on("load", function(){
-            $(".thumbnail-image").css("display", "block");
+            $(".thumbnail-image").css("opacity", "1");
         });
     });
    
