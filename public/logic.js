@@ -214,12 +214,11 @@ $(document).ready(function(){
         );
     });
 
-    // $("#gallery").ready(function(){
-    //     $(".thumbnail-image").on("load", function(){
-    //         $(".thumbnail-image").css("display", "block");
-    //         $(".thumbnail-image").animate({opacity:1}, 1000);
-    //     });
-    // });
+    $("#gallery").ready(function(){
+        $(".thumbnail-image").on("load", function(){
+            $(".thumbnail-image").css("display", "block");
+        });
+    });
    
     // =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
 
