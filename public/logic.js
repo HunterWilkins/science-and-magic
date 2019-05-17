@@ -215,9 +215,9 @@ $(document).ready(function(){
     });
 
     $("#gallery").ready(function(){
-        $(".thumbnail-image").ready(function(){
+        $(".thumbnail-image").on("load", function(){
             $(".thumbnail-image").css("display", "block");
-            $(".thumbnail-image").animate({opacity:1}, 50);
+            $(".thumbnail-image").animate({opacity:1}, 1000);
         });
     });
    
