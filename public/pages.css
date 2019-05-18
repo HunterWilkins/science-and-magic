@@ -184,7 +184,7 @@
     margin:0 auto;
 }
 
-@media screen and (max-width:350px){
+@media screen and (max-width:400px){
     #description-box {
         height:300px;
         bottom: -300px;
