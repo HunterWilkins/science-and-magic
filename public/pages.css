@@ -188,6 +188,9 @@
         height:200px;
         bottom: -200px;
     }
+    #toggle-desc {
+        top:-42px;
+    }
     #description {
         height:5em;
     }
