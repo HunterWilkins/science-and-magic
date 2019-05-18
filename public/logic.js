@@ -226,7 +226,7 @@ $(document).ready(function(){
                 </div>
                 `
             );
-            $("#full-image").ready(function(){
+            $("#full-image").on("load", function(){
                 $("#full-image").css("top", "50%");
             })
         });
