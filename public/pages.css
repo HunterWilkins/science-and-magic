@@ -142,8 +142,8 @@
 }
 
 #description-box{
-    border-top: rgba(245, 197, 92, .75) solid 2px;
-    background:rgba(5, 3, 3, .75);
+    border-top: rgb(245, 197, 92) solid 2px;
+    background:rgb(5, 3, 3);
     padding:10px;
     text-align:center;
     position:fixed;
@@ -159,7 +159,7 @@
     position:absolute;
     right:15%;
     top:-39px;
-    border:rgba(245, 197, 92, .75) solid 2px;
+    border:rgba(245, 197, 92) solid 2px;
     border-top-left-radius:6px;
     border-top-right-radius:6px;
     padding:6px 12px;
@@ -168,6 +168,7 @@
     font-family:inherit;
     background:rgb(5, 3, 3);
     color:rgb(245, 197, 92);
+    z-index:9;
 }
 
 #toggle-desc:hover{
@@ -189,7 +190,7 @@
         bottom: -200px;
     }
     #toggle-desc {
-        top:-48px;
+        top:-46px;
     }
     #description {
         height:5em;
