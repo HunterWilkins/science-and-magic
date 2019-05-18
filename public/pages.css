@@ -182,3 +182,13 @@
     min-width:100px;
     margin:0 auto;
 }
+
+@media screen and (max-width:350px){
+    #description-box {
+        height:200px;
+        bottom: -200px;
+    }
+    #description {
+        height:5em;
+    }
+}
