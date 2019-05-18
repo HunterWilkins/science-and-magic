@@ -219,15 +219,16 @@ $(document).ready(function(){
 
     // Artwork Full-Screen Functionality =/=/=/=/=/=/=/=/=/=/=/=/
         $("#gallery").on("click", ".thumbnail", function(){
-            console.log("Clicked!");
-            console.log($(this).attr("value"));
             $("body").append(
                 `
                 <div id = "fullscreen">
-                    <img src = "/images/full-sized/${$(this).attr("value")}" alt = "fullscreen image">
+                    <img id = "full-image" src = "/images/full-sized/${$(this).attr("value")}" alt = "fullscreen image">
                 </div>
                 `
             );
+            $("#full-image").ready(function(){
+                $("#full-image").css("top", "50%");
+            })
         });
 
         $("body").on("click", "#fullscreen", function(){
