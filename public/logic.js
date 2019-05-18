@@ -206,7 +206,7 @@ $(document).ready(function(){
     artwork.forEach(function(item) {
         $("#gallery").append(
             `
-            <div class = "thumbnail" value = "${item.large}">
+            <div class = "thumbnail" value = "${item.large}" description = "${item.desc}">
                 <img class = "thumbnail-image" src = "/images/thumbnails/${item.thumbnail}" alt = ${item.large.split(".")[0]}>
                 <p class = "title">${item.large.split(".")[0]}</p>
             </div>     
@@ -223,12 +223,18 @@ $(document).ready(function(){
                 `
                 <div id = "fullscreen">
                     <img id = "full-image" src = "/images/full-sized/${$(this).attr("value")}" alt = "fullscreen image">
+                    <div id = "description-box">
+                        <h2 id = "full-title">${$(this).attr("value").split(".")[0]}</h2>
+                        <hr>
+                        <p id = "description">${$(this).attr("desc")}</p>
+                    </div>
                 </div>
                 `
             );
 
             $("#full-image").on("load", function(){
                 $("#full-image").css("top", "50%");
+                $("#description-box").css("bottom", "0");
             })
         });
 
