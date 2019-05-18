@@ -142,13 +142,43 @@
 }
 
 #description-box{
+    border-top: rgba(245, 197, 92, .75) solid 2px;
     background:rgba(5, 3, 3, .75);
     padding:10px;
     text-align:center;
-    position:absolute;
-    height:300px;
+    position:fixed;
+    height:150px;
     width:100%;
-    bottom:-300px;
+    bottom:-150px;
+    z-index:10;
 
     transition: bottom .5s;
+}
+
+#toggle-desc {
+    position:absolute;
+    right:15%;
+    top:-39px;
+    border:rgba(245, 197, 92, .75) solid 2px;
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    padding:6px 12px;
+    border-bottom:none;
+    font-size:20px;
+    font-family:inherit;
+    background:rgb(5, 3, 3);
+    color:rgb(245, 197, 92);
+}
+
+#toggle-desc:hover{
+    cursor:pointer;
+}
+
+#description {
+    
+    overflow-y:scroll;
+    height:4em;
+    max-width:700px;
+    min-width:100px;
+    margin:0 auto;
 }
