@@ -247,7 +247,12 @@ $(document).ready(function(){
                         
                 $("#toggle-desc").on("click", function(){
                     if (descToggle){
-                        $("#description-box").css("bottom", "-150px");
+                        if ($(window).width() < 400){
+                            $("#description-box").css("bottom", "-200px");
+                        }
+                        else {
+                            $("#description-box").css("bottom", "-150px");
+                        }
                     }
                     else {
                         $("#description-box").css("bottom", "0");
