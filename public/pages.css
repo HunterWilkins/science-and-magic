@@ -168,7 +168,7 @@
     font-family:inherit;
     background:rgb(5, 3, 3);
     color:rgb(245, 197, 92);
-    z-index:9;
+    z-index:8;
 }
 
 #toggle-desc:hover{
