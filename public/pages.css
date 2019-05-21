@@ -97,7 +97,7 @@
 }
 
 .thumbnail-image{
-    background: transparent url(https://ui-ex.com/images/transparent-background-loading.gif) 50% no-repeat;
+    background: transparent url(/public/images/loading-gif.gif) 100% no-repeat;
     width:100%;
     position:absolute;
     top:50%;
