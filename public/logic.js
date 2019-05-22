@@ -171,6 +171,12 @@ $(document).ready(function(){
             genre:"concept",
             large:"The Demon of Hate.jpg",
             desc: "The poor thing roared for hours before her throat gave out. Pater's being an absolute angel to her, but it's going to take time..."        
+        },
+        {
+            thumbnail: "Daloch - God of Shadow-Thumbnail.jpg",
+            genre: "concept",
+            large:"Daloch - God of Shadow.jpg",
+            desc: ""
         }
                 
         ];
