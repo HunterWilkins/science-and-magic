@@ -121,7 +121,7 @@ $(document).ready(function(){
             thumbnail:"Awkward-Thumbnail.jpg",
             genre: "romance",
             large: "Awkward.jpg",
-            desc: `"Hostage Situation: "I hope she's not scared..." / "I hope he's not crazy..."`
+            desc: "Hostage Situation: \"I hope she's not scared...\" / \"I hope he's not crazy...\""
         },
         {
             thumbnail:"A Couple Stories-Thumbnail.jpg",
@@ -145,7 +145,7 @@ $(document).ready(function(){
             thumbnail:"Triumph-Thumbnail.jpg",
             genre:"romance",
             large:"Triumph.jpg",
-            desc:`Hostage Situation: "Three square meals a day and housing with your sweetheart? Sounds like a triumph to me, right?"`
+            desc:"Hostage Situation: \"Three square meals a day and housing with your sweetheart? Sounds like a triumph to me, right?\""
         },
 
         {
@@ -170,7 +170,7 @@ $(document).ready(function(){
             thumbnail:"The Demon of Hate - Thumbnail.jpg",
             genre:"concept",
             large:"The Demon of Hate.jpg",
-            desc: `"The poor thing roared for hours before her throat gave out. Pater's being an absolute angel to her, but it's going to take time..."`        
+            desc: "The poor thing roared for hours before her throat gave out. Pater's being an absolute angel to her, but it's going to take time..."        
         },
         {
             thumbnail: "Daloch - God of Shadow-Thumbnail.jpg",
