@@ -179,7 +179,7 @@ $(document).ready(function(){
             desc: ""
         },
         {
-            thumbnail: "The Black Hole Merchant-Thumbnail.jpg",
+            thumbnail: "The Black Hole Salesman-Thumbnail.jpg",
             genre: "concept",
             large: "The Black Hole Merchant.jpg",
             desc: ""
