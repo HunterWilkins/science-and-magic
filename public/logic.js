@@ -177,6 +177,12 @@ $(document).ready(function(){
             genre: "concept",
             large:"Daloch - God of Shadow.jpg",
             desc: ""
+        },
+        {
+            thumbnail: "The Black Hole Merchant-Thumbnail.jpg",
+            genre: "concept",
+            large: "The Black Hole Merchant.jpg",
+            desc: ""
         }
                 
         ];
