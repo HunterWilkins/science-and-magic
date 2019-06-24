@@ -183,6 +183,12 @@ $(document).ready(function(){
             genre: "concept",
             large: "The Black Hole Merchant.jpg",
             desc: ""
+        },
+        {
+            thumbnail: "Tom-Tom Pass-Thumbnail.jpg",
+            genre: "concept",
+            large: "Tom-Tom Pass.jpg",
+            desc: "A landscape for my little brother who's a percussionist."
         }
                 
         ];
