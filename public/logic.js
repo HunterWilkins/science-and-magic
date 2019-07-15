@@ -48,7 +48,7 @@ $(document).ready(function(){
             project: false
         },
         {
-            href: "bottomless-box.herokuapp.com",
+            href: "https://bottomless-box.herokuapp.com",
             github: "https://github.com/HunterWilkins/Bottomless-Box",
             title: "The Bottomless Box",
             img: "images/code/Icon.png",
