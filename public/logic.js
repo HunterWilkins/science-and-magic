@@ -46,6 +46,14 @@ $(document).ready(function(){
             img: null,
             desc: "The Tip-Top Tipping Calculator!",
             project: false
+        },
+        {
+            href: "https://bottomless-box.herokuapp.com",
+            github: "https://github.com/HunterWilkins/Bottomless-Box",
+            title: "The Bottomless Box",
+            img: "images/code/Icon.png",
+            desc: "Inventory management made significantly less dull!",
+            project: false
         }
 
     ]
