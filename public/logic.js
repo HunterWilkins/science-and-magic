@@ -189,6 +189,12 @@ $(document).ready(function(){
             genre: "concept",
             large: "Tom-Tom Pass.jpg",
             desc: "A landscape for my little brother who's a percussionist."
+        },
+        {
+            thumbnail: "The Upper Class Stray-Thumbnail.jpg",
+            genre: "misc",
+            large: "The Upper Class Stray.jpg",
+            desc: "A portrait of my father's 'favorite' dog"
         }
                 
         ];
