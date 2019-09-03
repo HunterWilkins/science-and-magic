@@ -1,0 +1,52 @@
+
+.code-card {
+    background:rgb(5, 3, 3);
+    text-align:center;
+    display:inline-block;
+    position:relative;
+    margin:5px;
+    padding:10px;
+    width:200px;
+    height:350px;
+    overflow:hidden;
+}
+
+.github-icon {
+    opacity:.7;
+    width:20px;
+    position:absolute;
+    top:5px;
+    right:5px;
+    z-index:4;
+}
+
+.code-card h2{
+    margin:0 auto;
+    max-width:70%;
+}
+
+.code-card img {
+    max-width:75%;
+    
+    transition: transform .25s;
+}
+
+.code-card a>p{
+    overflow-y: scroll;
+}
+
+.signature {
+    font-style:italic;
+    margin:20px auto;
+    font-size:48px;
+    text-shadow:0 0 10px rgb(245, 197, 92);
+    
+    transition: transform .25s, color .25s;
+}
+
+
+.signature:hover, .code-card img:hover{
+    transform:scale(1.2);
+    color:rgb(255, 232, 158);
+    text-shadow:0 0 5px rgb(255, 232, 158);
+}

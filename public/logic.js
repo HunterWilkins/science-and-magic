@@ -7,8 +7,10 @@ $(document).ready(function(){
     }
     // =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
 
-    if ($(window).width() < 500){
-        $("#main-title").text("HW");
+    switch (window.location.pathname.split("/")[1]) {
+        case "home":
+            console.log("Home");
+            
     }
 
     // Data =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
@@ -246,7 +248,6 @@ $(document).ready(function(){
             `
         );
     });
-
    
     // =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
 
@@ -294,9 +295,6 @@ $(document).ready(function(){
             });
         });
         
-
-
-        
     // /=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
 
     // Sidebar functionality
@@ -320,16 +318,6 @@ $(document).ready(function(){
         }
         
     }
-
-    $(window).on("resize", function(){
-        if ($(window).width() < 500){
-            $("#main-title").text("HW");
-        }
-        else {
-            $("#main-title").text("Hunter Wilkins");
-        }
-    });
-
 
     // End of Document.Ready function =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
 });

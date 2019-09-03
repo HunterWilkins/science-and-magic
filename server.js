@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
-const PORT = process.env.PORT || 8800;
+const exphbs = require("express-handlebars");
+const PORT = process.env.PORT || 3000
 const app = express();
 
 app.use(express.static("public"));
@@ -9,21 +10,12 @@ app.use(express.static("public"));
 app.use(express.urlencoded({extended : true}));
 app.use(express.json());
 
+// Handlebars
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "/public/index.html"));
-});
-app.get("/home", function(req, res){
-    res.sendFile(path.join(__dirname, "/public/index.html"));
-});
+app.engine("handlebars", exphbs({defaultLayout: "main"}));
+app.set("view engine", "handlebars");
 
-app.get("/artwork", function(req, res){
-    res.sendFile(path.join(__dirname, "/public/artwork.html"));
-});
-
-app.get("/code", function(req, res){
-    res.sendFile(path.join(__dirname, "/public/code.html"));
-});
+require("./routes/html")(app);
 
 app.listen(PORT, () => {
     console.log(`Science and Magic Server now Listening on Port ${PORT}.`);

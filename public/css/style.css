@@ -1,7 +1,7 @@
 * {
     box-sizing:border-box;
 }
-/* Basic Styles =/=/=/=/=/=/=/=*/
+
 body {
     background: rgb(29, 21, 17);
     color:rgb(236, 181, 109);
@@ -52,7 +52,6 @@ hr {
     border-color:rgb(245, 197, 92);
     width:80%;
 }
-/*=/=/=/=/=/=/=/=/=/=/=/=/=/=*/
 
 nav {
     position:fixed;
@@ -109,8 +108,9 @@ nav > * {
     position:fixed;
     top:50px;
     left:-310px;
+    bottom: 0;
     width:300px;
-    min-height:100vh;
+    
     padding:15px 5px;
     line-height:2em;
 
@@ -137,4 +137,49 @@ footer {
     background:rgb(5, 3, 3);
 
     z-index:5;
+}
+
+@media only screen and (max-width: 400px) {
+    #sidebar {
+        top: initial;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 50px;
+        text-align:center;
+        width: initial;
+        border-right: none;
+        border-top: rgb(245, 197, 92) solid 1px;
+    }
+
+    #navbuttons {
+        position: relative;
+        transform: translateY(-50%);
+        top:50%;
+    }
+
+    .tab {
+        font-size: 18px;
+        display: inline-block;
+        width: 32%;
+    }
+
+    #show-sidebar {
+        display:none;
+    }
+
+    nav {
+        text-align:center;
+        border-bottom: rgb(245, 197, 92) solid 1px;
+    }
+
+    #main-title {
+        text-align:center;
+        width: 100%;
+        left: initial;
+    }
+
+    footer {
+        display: none;
+    }
 }
