@@ -7,12 +7,27 @@ $(document).ready(function(){
     }
     // =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
 
-    switch (window.location.pathname.split("/")[1]) {
-        case "home":
-            console.log("Home");
-            
+    let routeName =  window.location.pathname.split("/")[1].toLowerCase();
+    console.log(routeName);
+    
+    function checkCaps(string) {
+        let array = [];
+
+        console.log(string);
+
+
+        console.log(array);
     }
 
+    $("#navbuttons a").each(function(i) {
+        if ($(this).text().toLowerCase() === routeName) {
+            $(this).css(
+                {
+                    "background": "rgba(245, 197, 92, .25)"
+                }
+            )
+        }
+    });
     // Data =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
 
     let codeCards = [
@@ -210,7 +225,6 @@ $(document).ready(function(){
         ];
 
     // =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
-
 
     // Population =/=/=/=/=/=/=/=/=/=/=/=/=/=/
     codeCards.forEach(function(item){

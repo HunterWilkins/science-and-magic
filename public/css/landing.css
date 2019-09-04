@@ -4,30 +4,34 @@
 }
 
 #about-info {
-
     max-width:600px;
     margin: 0 auto;
-    padding:15px;
+    padding:10px;
 
-    background:rgb(5, 3, 3);
+    /* background:rgb(5, 3, 3); */
 }
 
-#github-profile {
-    float:left;
-    width:50%;
+#about-info p {
+    padding-top: 5px;
 }
 
-#linkedIn-profile {
-    float:right;
-    width:50%;
+#info {
+    border-top:rgb(245, 197, 92) solid 1px;
+    border-bottom:rgb(245, 197, 92) solid 1px;
+
+    padding: 5px;
+
+    width: 100%;
 }
 
-#github-profile:hover, #linkedIn-profile:hover {
-    color:rgb(255, 232, 158);
-    text-shadow:0 0 5px rgb(255, 232, 158);
+#info a {
+    font-size: 20px;
+    display: inline-block;
+    width: 30%;
+    transition: .15s;
 }
 
-#resume-link:hover {
-    color:rgb(255, 232, 158);
-    text-shadow:0 0 10px rgb(255, 232, 158);
+#info a:hover {
+    transform: scale(1.2);
+    color:rgb(255, 234, 164);
 }
