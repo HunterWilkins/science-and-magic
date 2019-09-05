@@ -101,7 +101,9 @@ nav > * {
     bottom: 25px;
     padding:15px;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
+
 
 #sidebar {
     position:fixed;
