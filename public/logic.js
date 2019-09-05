@@ -1,33 +1,58 @@
 $(document).ready(function(){
 
-    // Custom, pseudo "state" object =/=/=/=/=/=/
-    let state = {
-        sidebar: false,
-        page: "About"
-    }
-    // =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
+
+
+    let mobile;
+
+    checkMobile();
 
     let routeName =  window.location.pathname.split("/")[1].toLowerCase();
-    console.log(routeName);
     
-    function checkCaps(string) {
-        let array = [];
+    showCurrentPage();
 
-        console.log(string);
-
-
-        console.log(array);
-    }
-
-    $("#navbuttons a").each(function(i) {
-        if ($(this).text().toLowerCase() === routeName) {
-            $(this).css(
-                {
-                    "background": "rgba(245, 197, 92, .25)"
-                }
-            )
-        }
+    $(window).resize(function(){
+        checkMobile();
+        showCurrentPage();
     });
+
+    function checkMobile() {
+        if ($(window).width() < 400) {
+            mobile = true;
+        }      
+        else {
+            mobile = false;
+        }
+    }
+         
+    function showCurrentPage() {
+        $("#navbuttons a").each(function() {
+            if ($(this).text().toLowerCase() === routeName) {
+                if (mobile === true) {
+                    $(this).css(
+                        {
+                            "background": "rgba(245, 197, 92, .25)" ,
+                            "border-top": "none",
+                            "border-bottom" : "none",
+                            "text-shadow" : "none"
+                        }
+                    )
+                }
+                else {
+                    $(this).css({
+                        "border-bottom": "rgb(245, 197, 92) solid 1px",
+                        "border-top": "rgb(245, 197, 92) solid 1px",
+                        "background": "rgba(29, 21, 17, 1)",
+                        "text-shadow": "0 1px 2px black"
+    
+                    })
+                }
+                
+            }
+        });    
+    }
+   
+    console.log(mobile);
+    
     // Data =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
 
     let codeCards = [
