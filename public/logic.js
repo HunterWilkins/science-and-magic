@@ -1,6 +1,11 @@
+
 $(document).ready(function(){
 
+    if (!localStorage.getItem("darkMode")) {
+        localStorage.setItem("darkMode", "true");
+    }
 
+    // changeScheme(localStorage.getItem("darkMode"));
 
     let mobile;
 
@@ -13,6 +18,21 @@ $(document).ready(function(){
     $(window).resize(function(){
         checkMobile();
         showCurrentPage();
+
+    });
+
+    $("nav").on("click", ".switch", function(){
+        let oldScheme = localStorage.getItem("darkMode");
+        let newScheme;
+        if (oldScheme === "true") {
+            newScheme = "false";
+        }
+
+        else {
+            newScheme = "true";
+        }
+
+        // changeScheme(newScheme);
     });
 
     function checkMobile() {
@@ -21,37 +41,89 @@ $(document).ready(function(){
         }      
         else {
             mobile = false;
+            $("#sidebar").css({
+                "border-top":"none"
+            })
+        }
+
+        
+        if ($(window).width() < 330) {
+            $("#main-title").text("HW");
+        }
+
+        else {
+            $("#main-title").text("Hunter Wilkins");
         }
     }
-         
+    
     function showCurrentPage() {
         $("#navbuttons a").each(function() {
             if ($(this).text().toLowerCase() === routeName) {
-                if (mobile === true) {
-                    $(this).css(
-                        {
-                            "background": "rgba(245, 197, 92, .25)" ,
-                            "border-top": "none",
-                            "border-bottom" : "none",
-                            "text-shadow" : "none"
-                        }
-                    )
-                }
-                else {
-                    $(this).css({
-                        "border-bottom": "rgb(245, 197, 92) solid 1px",
-                        "border-top": "rgb(245, 197, 92) solid 1px",
-                        "background": "rgba(29, 21, 17, 1)",
-                        "text-shadow": "0 1px 2px black"
-    
-                    })
-                }
-                
+                $(this).addClass("active-tab");
             }
         });    
     }
+
+    // changeScheme();
+
    
-    console.log(mobile);
+    // Color Scheme =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
+    // function changeScheme(darkMode) {
+
+
+    //     // if (event) {
+    //     //     event.preventDefault();
+    //     // }
+
+    //     setTimeout(function(){
+            
+        
+    //     if (darkMode === "false") {
+    //         $("nav input").prop("checked", true);
+
+    //         $("link[href='/css/style.css']").attr("href", "/css/bright.css");
+
+    //         if (mobile) {
+    //             $("#info a").css({
+    //                 "background" : "white"
+    //             });    
+    //         }
+           
+    //         $("#info").css({
+    //             "border-color" : "black"
+    //         });
+
+    //         localStorage.setItem("darkMode", "false");
+            
+    //     }
+
+    //     else if (darkMode === "true") {
+          
+    //         $("link[href='/css/bright.css'").attr("href", "/css/style.css");
+
+    //         if (mobile) {
+                    
+    //             $("#info a").css({
+    //                 "background" : "rgb(5, 3, 3)"
+    //             });
+
+    //             $("#sidebar").css({
+    //                 "border-top": "rgb(245, 197, 92) solid 1px"
+    //             });
+    //         }
+
+    //         $("#info").css({
+    //             "border-color" : "rgb(245, 197, 92)"
+    //         });
+
+    //         localStorage.setItem("darkMode", "true");
+    //     }
+
+    //     }, 1);
+
+    // }
+
+    // =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
     
     // Data =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
 
@@ -272,7 +344,23 @@ $(document).ready(function(){
             </div>
             `
         );
+        if (localStorage.getItem("darkMode") === "true") {
+            $(".code-card").css({
+                "background": "rgb(5,3,3)",
+                "color" : "rgb(236,181,109)"
+            });
+        }
 
+        else {
+            $(".code-card").css({
+                "background": "rgb(37,58,69)",
+                "color" : "white"
+            });
+
+            $(".code-card hr").css({
+                "border-color" : "white"
+            })
+        }
 
     });
 
@@ -286,6 +374,7 @@ $(document).ready(function(){
             </div>     
             `
         );
+        
     });
    
     // =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
@@ -311,6 +400,18 @@ $(document).ready(function(){
                 let descToggle = true;
                 $("#full-image").css("top", "50%");
                 $("#description-box").css("bottom", "0");
+
+                if (localStorage.getItem("darkMode") === "true") {
+                    $("#description-box").css({
+                        "color" : "rgb(236, 181, 109)"
+                    });
+                }
+
+                else {
+                    $("#description-box").css({
+                        "color" : "white"
+                    })
+                }
 
                 $("#fullscreen").on("click", function(){
                     $("#fullscreen, #description-box").remove();
