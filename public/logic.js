@@ -144,14 +144,6 @@ $(document).ready(function(){
             desc: "Discover New Music Playing in Your Area",
             project: true
         },
-        {
-            href : "https://foreel.herokuapp.com/#",
-            github: "https://github.com/HunterWilkins/GroupProject2",
-            title: "Popcorn Night",
-            img: "images/code/Popcorn-Night-logo.png",
-            desc: "Take two movies you love, type them in, and find more movies just like them",
-            project: true
-        },
 
         {
             href : "https://hunterwilkins.github.io/Top-Tip/",
