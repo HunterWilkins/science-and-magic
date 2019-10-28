@@ -111,6 +111,8 @@
 }
 
 nav select {
+    /*Fixes Mobile Change of Select Formatting */
+    -webkit-appearance: none;
     cursor:pointer;
     position: absolute;
     transform: translateY("-50%");
