@@ -309,6 +309,12 @@ $(document).ready(function(){
             genre: "misc",
             large: "The Upper Class Stray.jpg",
             desc: "A portrait of my father's 'favorite' dog"
+        },
+        {
+            thumbnail: "The Strawberry Mountain Range-Thumbnail.jpg",
+            genre: "concept",
+            large: "The Strawberry Mountain Range.jpg",
+            desc: "A frog enjoys his laid-back vacation."
         }
                 
         ];
