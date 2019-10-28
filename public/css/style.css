@@ -2,10 +2,13 @@
     box-sizing:border-box;
 }
 
+::selection {
+    background: rgba(236, 181, 109, 0.363);
+}
+
 body {
     background: rgb(29, 21, 17);
     color:rgb(236, 181, 109);
-
     font-family: 'Buda', cursive;
     /* font-family: 'IBM Plex Mono', monospace; */
     line-height:2em;
@@ -269,6 +272,7 @@ footer span {
         text-align:center;
         width: 100%;
         left: initial;
+        content: "HW";
     }
 
     footer {
@@ -276,8 +280,3 @@ footer span {
     }
 }
 
-@media only screen and (max-width: 330px) {
-    #main-title{
-        content: "HW";
-    }
-}

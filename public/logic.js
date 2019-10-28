@@ -1,132 +1,6 @@
 
 $(document).ready(function(){
 
-    if (!localStorage.getItem("darkMode")) {
-        localStorage.setItem("darkMode", "true");
-    }
-
-    // changeScheme(localStorage.getItem("darkMode"));
-
-    let mobile;
-
-    checkMobile();
-
-    let routeName =  window.location.pathname.split("/")[1].toLowerCase();
-    
-    showCurrentPage();
-
-    $(window).resize(function(){
-        checkMobile();
-        showCurrentPage();
-
-    });
-
-    $("nav").on("click", ".switch", function(){
-        let oldScheme = localStorage.getItem("darkMode");
-        let newScheme;
-        if (oldScheme === "true") {
-            newScheme = "false";
-        }
-
-        else {
-            newScheme = "true";
-        }
-
-        // changeScheme(newScheme);
-    });
-
-    function checkMobile() {
-        if ($(window).width() < 400) {
-            mobile = true;
-        }      
-        else {
-            mobile = false;
-            $("#sidebar").css({
-                "border-top":"none"
-            })
-        }
-
-        
-        if ($(window).width() < 330) {
-            $("#main-title").text("HW");
-        }
-
-        else {
-            $("#main-title").text("Hunter Wilkins");
-        }
-    }
-    
-    function showCurrentPage() {
-        $("#navbuttons a").each(function() {
-            if ($(this).text().toLowerCase() === routeName) {
-                $(this).addClass("active-tab");
-            }
-        });    
-    }
-
-    // changeScheme();
-
-   
-    // Color Scheme =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
-    // function changeScheme(darkMode) {
-
-
-    //     // if (event) {
-    //     //     event.preventDefault();
-    //     // }
-
-    //     setTimeout(function(){
-            
-        
-    //     if (darkMode === "false") {
-    //         $("nav input").prop("checked", true);
-
-    //         $("link[href='/css/style.css']").attr("href", "/css/bright.css");
-
-    //         if (mobile) {
-    //             $("#info a").css({
-    //                 "background" : "white"
-    //             });    
-    //         }
-           
-    //         $("#info").css({
-    //             "border-color" : "black"
-    //         });
-
-    //         localStorage.setItem("darkMode", "false");
-            
-    //     }
-
-    //     else if (darkMode === "true") {
-          
-    //         $("link[href='/css/bright.css'").attr("href", "/css/style.css");
-
-    //         if (mobile) {
-                    
-    //             $("#info a").css({
-    //                 "background" : "rgb(5, 3, 3)"
-    //             });
-
-    //             $("#sidebar").css({
-    //                 "border-top": "rgb(245, 197, 92) solid 1px"
-    //             });
-    //         }
-
-    //         $("#info").css({
-    //             "border-color" : "rgb(245, 197, 92)"
-    //         });
-
-    //         localStorage.setItem("darkMode", "true");
-    //     }
-
-    //     }, 1);
-
-    // }
-
-    // =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
-    
-    // Data =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
-
     let codeCards = [
         {
             href : "https://gigbook-p3.herokuapp.com/",
@@ -163,7 +37,6 @@ $(document).ready(function(){
         }
 
     ]
-
     
     let artwork = [
         {
@@ -317,7 +190,127 @@ $(document).ready(function(){
             desc: "A frog enjoys his laid-back vacation."
         }
                 
-        ];
+    ];
+
+
+    if (window.location.pathname === "/artwork"){
+        $("nav").append(
+            `
+            <select>
+                <option selected disabled = "true">Select Genre</option>
+                <option value = "all">All</option>
+                <option value = "romance">Romance</option>
+                <option value = "concept">Concept</option>
+                <option value = "misc">Misc</option>
+            </select>
+            `
+        )    
+
+        filterArtwork("all");
+    }
+
+    else {
+        $("nav select").remove();
+    }
+
+    if (!localStorage.getItem("darkMode")) {
+        localStorage.setItem("darkMode", "true");
+    }
+
+    // changeScheme(localStorage.getItem("darkMode"));
+
+    let mobile;
+
+    checkMobile();
+
+    let routeName =  window.location.pathname.split("/")[1].toLowerCase();
+    
+    showCurrentPage();
+
+    $(window).resize(function(){
+        checkMobile();
+        showCurrentPage();
+    });
+
+    $("nav").on("click", ".switch", function(){
+        let oldScheme = localStorage.getItem("darkMode");
+        let newScheme;
+        if (oldScheme === "true") {
+            newScheme = "false";
+        }
+
+        else {
+            newScheme = "true";
+        }
+
+        // changeScheme(newScheme);
+    });
+
+    $("nav").on("change", "select", function() {
+        filterArtwork($(this).val());
+    });
+
+    function checkMobile() {
+        if ($(window).width() < 400) {
+            mobile = true;
+            if (window.location.pathname === "/artwork") {
+                $("#main-title").text("HW");
+                $("#main-title").css({
+                    "left" : "10px",
+                    "text-align" : "left",
+                    "width" : "initial"
+                });
+            }
+        }      
+        else {
+            mobile = false;
+            $("#sidebar").css({
+                "border-top":"none"
+            });
+            $("#main-title").text("Hunter Wilkins");
+        }
+    }
+    
+    function showCurrentPage() {
+        $("#navbuttons a").each(function() {
+            if ($(this).text().toLowerCase() === routeName) {
+                $(this).addClass("active-tab");
+            }
+        });    
+    }
+    
+    // Data =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/  
+
+    function filterArtwork(genre) {
+        $("#gallery").empty();
+        artwork.forEach(function(item) {
+            if (genre === "all") {
+                $("#gallery").append(
+                    `
+                    <div class = "thumbnail" value = "${item.large}" desc = "${item.desc}">
+                        
+                        <img class = "thumbnail-image" src = "/images/thumbnails/${item.thumbnail}" alt = ${item.large.split(".")[0]}>
+                        <p class = "title">${item.large.split(".")[0]}</p>
+                    </div>     
+                    `
+                );    
+            }
+
+            else if (item.genre === genre) {
+                $("#gallery").append(
+                    `
+                    <div class = "thumbnail" value = "${item.large}" desc = "${item.desc}">
+                        
+                        <img class = "thumbnail-image" src = "/images/thumbnails/${item.thumbnail}" alt = ${item.large.split(".")[0]}>
+                        <p class = "title">${item.large.split(".")[0]}</p>
+                    </div>     
+                    `
+                );
+    
+            }
+        })
+
+    }
 
     // =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
 
@@ -362,19 +355,6 @@ $(document).ready(function(){
 
     });
 
-    artwork.forEach(function(item) {
-        $("#gallery").append(
-            `
-            <div class = "thumbnail" value = "${item.large}" desc = "${item.desc}">
-                
-                <img class = "thumbnail-image" src = "/images/thumbnails/${item.thumbnail}" alt = ${item.large.split(".")[0]}>
-                <p class = "title">${item.large.split(".")[0]}</p>
-            </div>     
-            `
-        );
-        
-    });
-   
     // =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/
 
     // Artwork Full-Screen Functionality =/=/=/=/=/=/=/=/=/=/=/=/
