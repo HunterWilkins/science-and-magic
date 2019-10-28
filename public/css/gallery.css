@@ -118,6 +118,7 @@ nav select {
     top: 0px;
     right: 10px;
     transform: none;
+    font-size: 17px;
 
 
     background: rgb(29, 21, 17);
@@ -139,9 +140,5 @@ nav select {
 
     #description {
         height:5em;
-    }
-
-    nav select {
-        font-size: 17px;
     }
 }
