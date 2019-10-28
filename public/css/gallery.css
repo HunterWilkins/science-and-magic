@@ -124,7 +124,9 @@ nav select {
     color:rgb(236, 181, 109);
     height: 100%;
     padding: 0 10px;
-    border:none;
+    border: none;
+    border-left: rgba(236, 181, 109, 0.5) solid 1px;
+    border-right: rgba(236, 181, 109, 0.5) solid 1px;
         
 }
 
