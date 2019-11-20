@@ -14,4 +14,8 @@ module.exports = function(app) {
     app.get("/code", function(req, res){
         res.render("code");
     });
+
+    app.get("/commissions", function(req, res){
+        res.render("commissions");
+    });
 }

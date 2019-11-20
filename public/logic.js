@@ -273,7 +273,7 @@ $(document).ready(function(){
     
     function showCurrentPage() {
         $("#navbuttons a").each(function() {
-            if ($(this).text().toLowerCase() === routeName) {
+            if ($(this).text().toLowerCase() === routeName || $(this).text() === "Buy Art!" && routeName === "commissions") {
                 $(this).addClass("active-tab");
             }
         });    
