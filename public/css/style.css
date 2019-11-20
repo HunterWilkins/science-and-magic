@@ -221,7 +221,7 @@ footer span {
 
     #content {
         left: 0;
-        bottom: 50px;
+        bottom: 85px;
     }
 
     .active-tab, .active-tab-bright {
@@ -240,7 +240,7 @@ footer span {
         left: 0;
         bottom: 0;
         right: 0;
-        height: 50px;
+        height: 85px;
         text-align:center;
         width: initial;
         border-right: none;
