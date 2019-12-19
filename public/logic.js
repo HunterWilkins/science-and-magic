@@ -34,7 +34,15 @@ $(document).ready(function(){
             img: "images/code/Icon.png",
             desc: "Inventory management made significantly less dull!",
             project: false
-        }
+        },
+        {
+            href : "https://memelodge.herokuapp.com",
+            github: "https://github.com/HunterWilkins/memesite2.0",
+            title: "MemeLodge",
+            img: null,
+            desc: "The (second) Premier Spot for MEMES and DIVISIVE POLITICAL DISCOURSE!!!",
+            project: false
+        },
 
     ]
     
