@@ -39,7 +39,7 @@ $(document).ready(function(){
             href : "https://memelodge.herokuapp.com",
             github: "https://github.com/HunterWilkins/memesite2.0",
             title: "MemeLodge",
-            img: null,
+            img: "images/code/Memelodge_Logo.png",
             desc: "The (second) Premier Spot for MEMES and DIVISIVE POLITICAL DISCOURSE!!!",
             project: false
         },
