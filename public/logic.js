@@ -40,7 +40,7 @@ $(document).ready(function(){
             github: "https://github.com/HunterWilkins/memesite2.0",
             title: "MemeLodge",
             img: "images/code/Memelodge_Logo.png",
-            desc: "The (second) Premier Spot for MEMES and DIVISIVE POLITICAL DISCOURSE!!!",
+            desc: "The Premier Spot for MEMES and POLITICAL DISCOURSE!",
             project: false
         },
 
