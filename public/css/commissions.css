@@ -1,0 +1,13 @@
+ol, ul {
+    padding: 10px 10px 10px 25px;
+    background: rgb(3, 4, 5);
+    text-align:center;
+}
+
+li {
+    padding: 5px 5px 5px 15px;
+    margin: 10px auto;
+    max-width: 500px;
+    text-align:left;
+    background: rgb(29, 21, 17);
+}
