@@ -179,12 +179,12 @@ $(document).ready(function(){
             large: "The Black Hole Merchant.jpg",
             desc: ""
         },
-        {
-            thumbnail: "Tom-Tom Pass-Thumbnail.jpg",
-            genre: "concept",
-            large: "Tom-Tom Pass.jpg",
-            desc: "A landscape for my little brother who's a percussionist."
-        },
+        // {
+        //     thumbnail: "Tom-Tom Pass-Thumbnail.jpg",
+        //     genre: "concept",
+        //     large: "Tom-Tom Pass.jpg",
+        //     desc: "A landscape for my little brother who's a percussionist."
+        // },
         {
             thumbnail: "The Upper Class Stray-Thumbnail.jpg",
             genre: "misc",
